@@ -20,7 +20,7 @@ app.get("/", (req, res) => {
     message: "Welcome to HikmahQA - Islamic Q&A API",
     version: "1.0.0",
     endpoints: {
-      ask: "POST /api/qa/ask",
+    ask: "POST /api/question/ask",
     },
     description: "Ask Islamic questions and get answers based on Quran and Sahih Hadith",
     testing: "Use Postman to test the API endpoints",
@@ -51,7 +51,7 @@ app.use("*", (req, res) => {
 // Start server
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
-  console.log(`Islamic Q&A API: POST http://localhost:${PORT}/api/qa/ask`);
+ console.log(`Islamic Q&A API: POST http://localhost:${PORT}/api/question/ask`);
 });
 
 export default app;
